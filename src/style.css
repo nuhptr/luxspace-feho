@@ -45,6 +45,16 @@ body {
             background-size: 37.5%;
         }
     }
+
+    .card {
+        &:hover {
+            @apply shadow-lg;
+        }
+
+        & .card-shadow {
+            @apply transition duration-300 shadow-none h-full;
+        }
+    }
 }
 
 @media (min-width: theme("screens.md")) {
@@ -58,5 +68,16 @@ body {
             @apply w-20 h-20 -translate-x-1/2 -translate-y-1/2;
             background-size: auto;
         }
+    }
+}
+
+@layer utilities {
+    .stretched-link {
+        @apply absolute inset-0 z-10 cursor-pointer;
+    }
+
+    .grid {
+        grid-auto-flow: dense;
+        grid-auto-rows: minmax(180px, auto);
     }
 }
