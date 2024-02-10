@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Luxspace adalah sebuah website yang menjual barang-barang kece" />
+  <meta name="theme-color" content="#000">
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+  <title>Luxspace | Home</title>
+
+  <meta property="og:title" content="Luxspace - Saingan IKEA" />
+  <meta property="og:type" content="Menjual Furniture" />
+  <meta property="og:url" content="https://luxspace.com" />
+  <meta property="og:image" content="https://luxspace.com/images/content/preview-homepage.jpg" />
+
+  <link rel="icon" type="image/icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+  <!-- <div id="app"></div> -->
+  <!-- start header -->
+  <header class="absolute z-50 w-full px-4">
+    <div class="container py-10 mx-auto">
+      <div class="flex items-center">
+        <div class="flex items-center w-56">
+          <img src="/design/logo.svg" alt="Luxspace - adalah sebuah website yang menjual barang-barang kece" />
+        </div>
+        <!-- Mendorong space menu dan icons -->
+        <div class="w-full"></div>
+        <!-- start: menu hamburger wrapper -->
+        <div class="w-auto">
+          <ul id="menu"
+            class="fixed inset-0 flex flex-col items-center justify-center invisible bg-white opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100">
+            <li class="py-6 mx-3 md:py-0">
+              <a href="#" class="text-black hover:text-white hover:underline">Showcase</a>
+            </li>
+            <li class="py-6 mx-3 md:py-0">
+              <a href="#" class="text-black hover:text-white hover:underline">Catalog</a>
+            </li>
+            <li class="py-6 mx-3 md:py-0">
+              <a href="#" class="text-black hover:text-white hover:underline">Delivery</a>
+            </li>
+            <li class="py-6 mx-3 md:py-0">
+              <a href="#" class="text-black hover:text-white hover:underline">Rewards</a>
+            </li>
+          </ul>
+        </div>
+        <!-- end: menu hamburger wrapper -->
+        <div class="w-auto">
+          <ul class="flex items-center">
+            <li class="block ml-6 md:hidden">
+              <button id="menu-toogler"
+                class="relative z-50 flex items-center justify-center w-8 h-8 text-black focus:outline-none">
+                <!-- icon hamburger -->
+                <svg class="fill-current" width="18" height="17" viewBox="0 0 18 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.9773 0.461426H1.04219C0.466585 0.461426 0 0.790389 0 1.19621C0 1.60204 0.466668 1.931 1.04219 1.931H15.9773C16.5529 1.931 17.0195 1.60204 17.0195 1.19621C17.0195 0.79033 16.5529 0.461426 15.9773 0.461426Z" />
+                  <path
+                    d="M15.9773 7.68823H1.04219C0.466585 7.68823 0 8.0172 0 8.42302C0 8.82885 0.466668 9.15781 1.04219 9.15781H15.9773C16.5529 9.15781 17.0195 8.82885 17.0195 8.42302C17.0195 8.01714 16.5529 7.68823 15.9773 7.68823Z" />
+                  <path
+                    d="M15.9773 14.9148H1.04219C0.466585 14.9148 0 15.2438 0 15.6496C0 16.0554 0.466668 16.3844 1.04219 16.3844H15.9773C16.5529 16.3844 17.0195 16.0554 17.0195 15.6496C17.0195 15.2437 16.5529 14.9148 15.9773 14.9148Z" />
+                </svg>
+              </button>
+            </li>
+            <li class="ml-6">
+              <a href="cart.html" class="flex items-center justify-center w-8 h-8 text-black hover:text-white">
+                <!-- icon cart -->
+                <svg class="fill-current" width="29" height="25" viewBox="0 0 29 25" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.8754 19.9824C9.61762 19.9824 8.59436 21.023 8.59436 22.3021C8.59436 23.5812 9.61762 24.6218 10.8754 24.6218C12.1331 24.6218 13.1564 23.5812 13.1564 22.3021C13.1563 21.023 12.1331 19.9824 10.8754 19.9824ZM10.8754 23.3265C10.3199 23.3265 9.86796 22.8669 9.86796 22.302C9.86796 21.7371 10.3199 21.2775 10.8754 21.2775C11.4308 21.2775 11.8828 21.7371 11.8828 22.302C11.8828 22.867 11.4308 23.3265 10.8754 23.3265Z" />
+                  <path
+                    d="M18.8764 19.9824C17.6186 19.9824 16.5953 21.023 16.5953 22.3021C16.5953 23.5812 17.6186 24.6218 18.8764 24.6218C20.1342 24.6218 21.1575 23.5812 21.1575 22.3021C21.1574 21.023 20.1341 19.9824 18.8764 19.9824ZM18.8764 23.3265C18.3209 23.3265 17.869 22.8669 17.869 22.302C17.869 21.7371 18.3209 21.2775 18.8764 21.2775C19.4319 21.2775 19.8838 21.7371 19.8838 22.302C19.8838 22.867 19.4319 23.3265 18.8764 23.3265Z" />
+                  <path
+                    d="M19.438 7.76929H10.3122C9.96051 7.76929 9.67542 8.05921 9.67542 8.41689C9.67542 8.77456 9.96056 9.06448 10.3122 9.06448H19.438C19.7897 9.06448 20.0748 8.77456 20.0748 8.41689C20.0748 8.05916 19.7897 7.76929 19.438 7.76929Z" />
+                  <path
+                    d="M18.9414 11.1323H10.8089C10.4572 11.1323 10.1721 11.4223 10.1721 11.7799C10.1721 12.1376 10.4572 12.4275 10.8089 12.4275H18.9413C19.293 12.4275 19.5781 12.1376 19.5781 11.7799C19.5781 11.4223 19.293 11.1323 18.9414 11.1323Z" />
+                  <path
+                    d="M25.6499 4.88395C25.407 4.58083 25.0472 4.40701 24.6626 4.40701H4.82655L4.42595 2.42938C4.34232 2.01685 4.06563 1.67046 3.68565 1.50267L0.890528 0.268871C0.567841 0.126328 0.192825 0.276908 0.0528584 0.604959C-0.0872597 0.933113 0.0608116 1.31453 0.383347 1.45687L3.17852 2.69072L6.2598 17.9013C6.38117 18.5003 6.90578 18.9351 7.50723 18.9351H22.7635C23.1152 18.9351 23.4003 18.6451 23.4003 18.2875C23.4003 17.9298 23.1152 17.6399 22.7635 17.6399H7.50728L7.13247 15.7896H22.8814C23.4828 15.7896 24.0075 15.3548 24.1288 14.7558L25.9101 5.9634C25.9876 5.58054 25.8928 5.18701 25.6499 4.88395ZM22.8814 14.4945H6.87012L5.08895 5.70217L24.6626 5.70222L22.8814 14.4945Z" />
+                  <circle cx="25" cy="4.89014" r="4" fill="#F9CADA" class="cart-filled" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- start hero -->
+  <section class="flex items-center mx-auto hero max-w-[1440px]">
+    <!--start hero | left side -->
+    <div
+      class="absolute inset-0 z-20 flex flex-col justify-center w-full text-center md:relative md:w-1/2 hero-caption">
+      <h1 class="text-3xl font-semibold leading-tight md:text-5xl">The Room <br class="" />You've Dreaming </h1>
+      <h2 class="px-8 mt-5 text-base tracking-wide md:px-0 md:text-lg">
+        Kami menyediakan furniture berkelas yang<br class="hidden lg:block" />
+        membuat ruangan terasa homey
+      </h2>
+      <div>
+        <a href="#browse-the-room"
+          class="flex-none inline-block px-8 py-3 mt-7 text-black transition duration-200 bg-[#F9CADA] rounded-full hover:bg-black hover:text-[#F9CADA]">
+          Explore Now
+        </a>
+      </div>
+    </div>
+    <!-- end hero | left side -->
+    <!-- start hero | right side -->
+    <div class="inset-0 w-full md:relative md:w-1/2">
+      <div class="relative hero-image">
+        <div class="inset-0 z-10 bg-black overlay opacity-30"></div>
+        <div class="bottom-0 right-0 overlay md:inset-0">
+          <button class="z-30 video hero-cta focus:outline-none modal-trigger" data-content='
+            <div class="relative z-50 w-screen pb-56 md:w-[400px]">
+              <div class="absolute w-full h-full">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_Q08g-sjp6E?si=kZHIeNZfWVOunWVt"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div> 
+            </div>'>
+          </button>
+        </div>
+        <img src="/image/image-hero.png" alt="House with sofa and some plants"
+          class="absolute inset-0 object-cover object-center w-full h-full md:relative" />
+      </div>
+    </div>
+    <!-- end hero | right side -->
+  </section>
+  <!-- end hero -->
+
+  <!-- start browser the room -->
+  <section class="flex px-4 py-24 bg-gray-100" id="browse-the-room">
+    <div class="container mx-auto">
+      <div class="flex items-start mb-8">
+        <h3 class="text-2xl font-semibold leading-snug tracking-tight capitalize">
+          Browse The Room <br class="" />That We Designed For You
+        </h3>
+      </div>
+      <div class="grid grid-cols-9 grid-rows-2 gap-4">
+        <div class="relative col-span-9 row-span-1 md:col-span-4 card" style="height: 180px;">
+          <div class="card-shadow rounded-xl">
+            <img src="/image/image-browse-1.png" alt="image browse 1"
+              class="object-cover w-full h-full overflow-hidden overlay rounded-xl" />
+          </div>
+          <div class="top-0 bottom-0 left-0 flex flex-col justify-center pl-48 overlay md:pl-96">
+            <h5 class="text-lg font-semibold">Living Room</h5>
+            <span class="">18.309 items</span>
+          </div>
+          <a href="details.html" class="stretched-link">
+            <!-- Fake Children -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end browser the room -->
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+@layer components {
+    .overlay {
+        @apply absolute;
+
+        & .video {
+            @apply absolute flex items-center justify-center w-20 h-20 transform -translate-x-1/2 -translate-y-1/2 bg-[#BCE7F0] bg-center bg-no-repeat rounded-full;
+            background-image: url("/design/ic_play.svg");
+            top: 50%;
+            left: 50%;
+        }
+
+        * {
+            @apply transition-all duration-200;
+        }
+
+        &.hoverable {
+            @apply opacity-0;
+
+            &:hover > * {
+                @apply opacity-100;
+            }
+        }
+    }
+
+    .hero {
+        & .hero-image,
+        & .hero-caption {
+            min-height: 90vh;
+        }
+
+        & .hero-cta {
+            @apply w-12 h-12;
+            transform: translateX(-75px) translateY(-50%);
+            background-size: 37.5%;
+        }
+    }
+}
+
+@media (min-width: theme("screens.md")) {
+    .hero {
+        & .hero-image,
+        & .hero-caption {
+            min-height: auto;
+        }
+
+        & .hero-cta {
+            @apply w-20 h-20 -translate-x-1/2 -translate-y-1/2;
+            background-size: auto;
+        }
+    }
+}
