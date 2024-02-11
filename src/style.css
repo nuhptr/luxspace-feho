@@ -47,12 +47,14 @@ body {
     }
 
     .card {
-        &:hover {
-            @apply shadow-lg;
+        .card-shadow {
+            @apply h-full transition duration-300 shadow-none;
         }
 
-        & .card-shadow {
-            @apply transition duration-300 shadow-none h-full;
+        &:hover {
+            .card-shadow {
+                @apply shadow-lg;
+            }
         }
     }
 }
