@@ -83,3 +83,17 @@ body {
         grid-auto-rows: minmax(180px, auto);
     }
 }
+
+a {
+    &.cart svg g circle {
+        &.dot {
+            @apply hidden;
+        }
+    }
+
+    &.cart.cart-filled svg g circle {
+        &.dot {
+            @apply block;
+        }
+    }
+}
