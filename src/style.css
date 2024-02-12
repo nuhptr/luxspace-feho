@@ -6,94 +6,151 @@
 
 html,
 body {
-    font-family: "Open Sans", sans-serif;
+   font-family: "Open Sans", sans-serif;
 }
 
 @layer components {
-    .overlay {
-        @apply absolute;
+   /** Overlay */
+   .overlay {
+      @apply absolute;
 
-        & .video {
-            @apply absolute flex items-center justify-center w-20 h-20 transform -translate-x-1/2 -translate-y-1/2 bg-[#BCE7F0] bg-center bg-no-repeat rounded-full;
-            background-image: url("/design/ic_play.svg");
-            top: 50%;
-            left: 50%;
-        }
+      .video {
+         @apply absolute flex items-center justify-center w-20 h-20 transform -translate-x-1/2 -translate-y-1/2 bg-[#BCE7F0] bg-center bg-no-repeat rounded-full;
+         background-image: url("/design/ic_play.svg");
+         top: 50%;
+         left: 50%;
+      }
 
-        * {
-            @apply transition-all duration-200;
-        }
+      * {
+         @apply transition-all duration-200;
+      }
 
-        &.hoverable {
-            @apply opacity-0;
+      &.hoverable {
+         @apply opacity-0;
 
-            &:hover > * {
-                @apply opacity-100;
+         &:hover > * {
+            @apply opacity-100;
+         }
+      }
+   }
+
+   /** Hero at Mobile */
+   .hero {
+      .hero-image,
+      .hero-caption {
+         min-height: 90vh;
+      }
+
+      .hero-cta {
+         @apply w-12 h-12;
+         transform: translateX(-75px) translateY(-50%);
+         background-size: 37.5%;
+      }
+   }
+
+   /** Card */
+   .card {
+      .card-shadow {
+         @apply h-full transition duration-300 shadow-none;
+      }
+
+      &:hover {
+         .card-shadow {
+            @apply shadow-lg;
+         }
+      }
+   }
+
+   /** Breadcrumb */
+   ul.breadcrumb {
+      @apply flex flex-row items-center text-lg;
+
+      li:not(:last-child)::after {
+         content: "/";
+         @apply px-4;
+      }
+
+      li:not(:last-child) a {
+         @apply font-light;
+      }
+
+      li:last-child a {
+         @apply font-semibold;
+      }
+   }
+
+   /** Slider */
+   .slider {
+      @apply flex flex-col my-4;
+
+      .thumbnail {
+         @apply flex order-last w-screen pl-4 -mx-2 overflow-auto;
+
+         .item {
+            @apply relative mb-4 bg-gray-100 rounded-lg cursor-pointer w-[106px] h-[106px];
+
+            &::after {
+               content: "";
+               @apply absolute inset-0 transition duration-200 bg-black bg-opacity-0 border-2 border-opacity-0 rounded-lg;
             }
-        }
-    }
 
-    .hero {
-        & .hero-image,
-        & .hero-caption {
-            min-height: 90vh;
-        }
-
-        & .hero-cta {
-            @apply w-12 h-12;
-            transform: translateX(-75px) translateY(-50%);
-            background-size: 37.5%;
-        }
-    }
-
-    .card {
-        .card-shadow {
-            @apply h-full transition duration-300 shadow-none;
-        }
-
-        &:hover {
-            .card-shadow {
-                @apply shadow-lg;
+            &.selected::after {
+               @apply border-opacity-100 bg-opacity-35;
             }
-        }
-    }
+         }
+      }
+   }
 }
 
+/** Hero Responsive at Medium */
 @media (min-width: theme("screens.md")) {
-    .hero {
-        & .hero-image,
-        & .hero-caption {
-            min-height: auto;
-        }
+   .hero {
+      & .hero-image,
+      & .hero-caption {
+         min-height: auto;
+      }
 
-        & .hero-cta {
-            @apply w-20 h-20 -translate-x-1/2 -translate-y-1/2;
-            background-size: auto;
-        }
-    }
+      & .hero-cta {
+         @apply w-20 h-20 -translate-x-1/2 -translate-y-1/2;
+         background-size: auto;
+      }
+   }
+
+   .slider {
+      @apply flex-row;
+
+      .thumbnail {
+         @apply order-first block w-auto pl-0 overflow-visible;
+      }
+
+      .preview {
+         @apply h-[609px] w-[560px];
+      }
+   }
 }
 
 @layer utilities {
-    .stretched-link {
-        @apply absolute inset-0 z-10 cursor-pointer;
-    }
+   .stretched-link {
+      @apply absolute inset-0 z-10 cursor-pointer;
+   }
 
-    .grid {
-        grid-auto-flow: dense;
-        grid-auto-rows: minmax(180px, auto);
-    }
+   .grid {
+      grid-auto-flow: dense;
+      grid-auto-rows: minmax(180px, auto);
+   }
 }
 
+/** Cart and Cart filled */
 a {
-    &.cart svg g circle {
-        &.dot {
-            @apply hidden;
-        }
-    }
+   &.cart svg g circle {
+      &.dot {
+         @apply hidden;
+      }
+   }
 
-    &.cart.cart-filled svg g circle {
-        &.dot {
-            @apply block;
-        }
-    }
+   &.cart.cart-filled svg g circle {
+      &.dot {
+         @apply block;
+      }
+   }
 }
